@@ -5,89 +5,100 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".MainActivity">
 
+    <!-- Amazon Logo -->
     <ImageView
         android:id="@+id/image"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:scaleType="centerCrop"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/img"
+        android:scaleType="fitCenter"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
         android:hint="Email or phone number"
-        android:padding="16dp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toBottomOf="@id/image"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/passwordInput"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
         android:hint="Password"
-        android:padding="16dp"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/emailInput"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Forgot Password -->
     <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="Forgot password?"
-        android:textSize="16sp"
         android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp"
         app:layout_constraintTop_toBottomOf="@id/passwordInput"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintStart_toStartOf="@id/passwordInput" />
 
+    <!-- Sign In Button -->
     <Button
         android:id="@+id/signInButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F7A600"
         android:text="Sign in"
-        android:backgroundTint="@android:color/holo_orange_light"
+        android:textStyle="bold"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/forgotPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Create Account Button -->
     <Button
         android:id="@+id/createAccountButton"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#F7A600"
         android:text="Create your Amazon Account"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/signInButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Privacy Notice -->
     <TextView
         android:id="@+id/privacyNotice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Conditions of Use • Privacy Notice"
-        android:textSize="14sp"
         android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
         app:layout_constraintTop_toBottomOf="@id/createAccountButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
